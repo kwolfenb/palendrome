@@ -2,17 +2,10 @@
 
 // Business Logic
   var palindrome = function(input) {
-    var letters = input.split("");
-    var lettersReversed = letters.reverse();
-    var wordReversed = lettersReversed.join("");
-    if (wordReversed === input) {
-      return true;
-    } else {
-      return false;
+    return input == input.split('').reverse().join('');
     };
-  };
 
-  
+
 //User Interface Logic
 $(document).ready(function(){
   $("#inputForm").submit(function(event){
